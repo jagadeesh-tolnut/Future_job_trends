@@ -4,6 +4,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.uic import *
 import sys
+import webbrowser
 from PyQt5 import QtWidgets
 from PyQt5 import uic
 from urllib.error import HTTPError
@@ -47,6 +48,13 @@ class MainApp(QMainWindow, ui):
         self.pushButton_11.clicked.connect(self.trend_plot)
         self.pushButton_7.clicked.connect(self.import_report)
 
+    def explore(self):
+        a = self.lineEdit.text()
+        wiki_link = "https://en.wikipedia.org/wiki/"
+        wiki_job_link = wiki_link + a
+        webbrowser.open(wiki_job_link)
+
+
 
     def import_report(self):
         df = pd.read_csv(self.lineEdit_3.text())
@@ -78,6 +86,14 @@ class MainApp(QMainWindow, ui):
         self.report_initial_value = int(self.y[143])
         self.rep_gr_val = (((self.report_final_value-self.report_initial_value)/self.report_initial_value)*100)
         self.rep_gr_val = float("{:.2f}".format(self.rep_gr_val))
+        self.rep_gr_val_dis = str(self.rep_gr_val)+" %"
+        self.rep_con_lvl_min = str(self.report_conf[self.report_index][0])
+        self.rep_con_lvl_min = float("{:.2f}".format(float(self.rep_con_lvl_min)))
+        self.rep_con_lvl_max = str(self.report_conf[self.report_index][1])
+        self.rep_con_lvl_max = float("{:.2f}".format(float(self.rep_con_lvl_max)))
+        self.rep_con_lvl_val = str(self.rep_con_lvl_min)+" - "+str(self.rep_con_lvl_max)
+        self.report_final_value = str("{:.5f}".format(float(self.report_final_value)))
+
 
 
     def report_ui(self):
@@ -87,7 +103,10 @@ class MainApp(QMainWindow, ui):
         self.report_Title.setFont(QFont('Times', 20))
         self.report_Title.setAlignment(Qt.AlignCenter)
         self.image = QLabel(self.report)
-        self.image.setPixmap(QPixmap("red.png"))
+        if (float(self.rep_gr_val) < 0):
+            self.image.setPixmap(QPixmap("pics/red.png"))
+        else:
+            self.image.setPixmap(QPixmap("pics/green.png"))
         self.image.setGeometry(75,50,350,350)
         self.rep_model = QLabel("Model : ",self.report)
         self.rep_model.setGeometry(40,430, 111, 31)
@@ -110,13 +129,14 @@ class MainApp(QMainWindow, ui):
         self.rep_loc_ans = QLabel(self.report_loc, self.report)
         self.rep_loc_ans.setGeometry(240, 470, 241, 31)
         self.rep_loc_ans.setFont(QFont('Times', 15))
-        self.rep_fv_ans = QLabel(str(self.report_future_job[self.report_index]), self.report)
+        self.rep_fv_ans = QLabel(str(self.report_final_value), self.report)
         self.rep_fv_ans.setGeometry(240, 510, 241, 31)
         self.rep_fv_ans.setFont(QFont('Times', 15))
-        self.rep_con_ans = QLabel(str(self.report_conf[self.report_index]), self.report)
+        self.rep_con_ans = QLabel(self.rep_con_lvl_val, self.report)
+        print(str(self.report_conf[self.report_index][1]))
         self.rep_con_ans.setGeometry(240, 550, 241, 31)
         self.rep_con_ans.setFont(QFont('Times', 15))
-        self.rep_gr_ans = QLabel(str(self.rep_gr_val), self.report)
+        self.rep_gr_ans = QLabel(str(self.rep_gr_val_dis), self.report)
         self.rep_gr_ans.setGeometry(240, 590, 241, 31)
         self.rep_gr_ans.setFont(QFont('Times', 15))
         self.report.show()
@@ -235,13 +255,38 @@ class MainApp(QMainWindow, ui):
         data = df.head(5)
         #print(data)
 
+        experience = self.comboBox_4.currentText()
+
         min_sal = df["min_salary"]
-        min_sal = np.median(min_sal)
-        #print(min_sal)
+        min_sal_d = min_sal.describe()
+        if experience == "-":
+            min_sal = np.median(min_sal)
+        elif experience == "0-2 yrs":
+            min_sal = min_sal_d["25%"]
+        elif experience == "3-5 yrs":
+            min_sal = min_sal_d["50%"]
+        elif experience == "5+ yrs":
+            min_sal = min_sal_d["75%"]
+        else:
+            min_sal = np.median(min_sal)
+        print(min_sal)
 
         max_sal = df["max_salary"]
-        max_sal = np.median(max_sal)
-        #print(max_sal)
+        max_sal_d = max_sal.describe()
+
+        if experience == "-":
+            max_sal = np.median(max_sal)
+        elif experience == "0-2 yrs":
+            max_sal = max_sal_d["25%"]
+        elif experience == "3-5 yrs":
+            max_sal = max_sal_d["50%"]
+        elif experience == "5+ yrs":
+            max_sal = max_sal_d["75%"]
+        else:
+            max_sal = np.median(max_sal)
+
+        #max_sal = np.median(max_sal)
+        print(max_sal)
         min_sal = int(min_sal)
         min_sal = str(min_sal)
         max_sal = int(max_sal)
@@ -302,7 +347,7 @@ class MainApp(QMainWindow, ui):
 
     def sj(self):
         self.wid1 = QDialog()
-        self.wid1.setGeometry(400,150,434,500)
+        self.wid1.setGeometry(400,150,434,565)
         self.job_details = QLabel("Job Details",self.wid1)
         self.job_details.setGeometry(QtCore.QRect(150, 0, 141, 41))
         self.job_details.setFont(QFont('Times', 18))
@@ -319,7 +364,12 @@ class MainApp(QMainWindow, ui):
         self.salvalue = QLabel(self.predicted_Salary,self.wid1)
         self.salvalue.setGeometry(30,430,401,51)
         self.salvalue.setFont(QFont('Times', 22))
+        self.explore_more = QPushButton("Explore More",self.wid1)
+        self.explore_more.setGeometry(130,500,181,41)
+        self.explore_more.setFont(QFont('Times',16))
+        self.explore_more.clicked.connect(self.explore)
         self.wid1.show()
+
 
     def data_plot(self):
         df = pd.read_csv(self.lineEdit_3.text())

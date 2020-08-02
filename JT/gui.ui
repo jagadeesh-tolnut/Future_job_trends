@@ -28,8 +28,14 @@
       <pointsize>40</pointsize>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab_5">
      <attribute name="title">
@@ -67,7 +73,7 @@
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>220</y>
+        <y>190</y>
         <width>271</width>
         <height>71</height>
        </rect>
@@ -85,7 +91,7 @@
       <property name="geometry">
        <rect>
         <x>650</x>
-        <y>460</y>
+        <y>480</y>
         <width>341</width>
         <height>111</height>
        </rect>
@@ -133,7 +139,7 @@
       <property name="geometry">
        <rect>
         <x>330</x>
-        <y>220</y>
+        <y>190</y>
         <width>641</width>
         <height>81</height>
        </rect>
@@ -143,6 +149,75 @@
       </property>
       <property name="placeholderText">
        <string>Enter the Location</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>406</y>
+        <width>591</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_4">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>310</y>
+        <width>311</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>29</pointsize>
+       </font>
+      </property>
+      <property name="insertPolicy">
+       <enum>QComboBox::NoInsert</enum>
+      </property>
+      <item>
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0-2 yrs</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3-5 yrs</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5+ yrs</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>300</y>
+        <width>271</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>32</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Experience :</string>
       </property>
      </widget>
     </widget>
@@ -474,28 +549,10 @@
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBox">
-      <property name="geometry">
-       <rect>
-        <x>700</x>
-        <y>300</y>
-        <width>261</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Enter Custom values</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
-        <x>760</x>
+        <x>790</x>
         <y>330</y>
         <width>51</width>
         <height>41</height>
@@ -513,7 +570,7 @@
      <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
-        <x>760</x>
+        <x>790</x>
         <y>380</y>
         <width>51</width>
         <height>41</height>
@@ -531,7 +588,7 @@
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
-        <x>760</x>
+        <x>790</x>
         <y>430</y>
         <width>51</width>
         <height>41</height>
@@ -549,7 +606,7 @@
      <widget class="QLineEdit" name="lineEdit_4">
       <property name="geometry">
        <rect>
-        <x>800</x>
+        <x>830</x>
         <y>335</y>
         <width>71</width>
         <height>31</height>
@@ -564,7 +621,7 @@
      <widget class="QLineEdit" name="lineEdit_5">
       <property name="geometry">
        <rect>
-        <x>800</x>
+        <x>830</x>
         <y>385</y>
         <width>71</width>
         <height>31</height>
@@ -579,7 +636,7 @@
      <widget class="QLineEdit" name="lineEdit_6">
       <property name="geometry">
        <rect>
-        <x>800</x>
+        <x>830</x>
         <y>435</y>
         <width>71</width>
         <height>31</height>
@@ -744,6 +801,63 @@
       </property>
       <property name="text">
        <string>Year :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>290</y>
+        <width>281</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Check to enter a custom value</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="geometry">
+       <rect>
+        <x>759</x>
+        <y>340</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_2">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>390</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_3">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>440</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </widget>
     </widget>
