@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>0</y>
+      <y>10</y>
       <width>1071</width>
       <height>701</height>
      </rect>
@@ -35,33 +35,143 @@
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_5">
      <attribute name="title">
       <string>home</string>
      </attribute>
-     <widget class="QPushButton" name="pushButton_8">
+     <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
-        <x>940</x>
-        <y>10</y>
-        <width>61</width>
-        <height>61</height>
+        <x>50</x>
+        <y>140</y>
+        <width>451</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>44</y>
+         <width>200</width>
+         <height>200</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="resources.qrc">:/icons/payment.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_23">
+       <property name="geometry">
+        <rect>
+         <x>43</x>
+         <y>270</y>
+         <width>361</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Salary Prediction</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>140</y>
+        <width>451</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label_22">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>50</y>
+         <width>200</width>
+         <height>200</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="resources.qrc">:/icons/arrow.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_24">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>280</y>
+         <width>361</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Job Trend Prediction</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>20</y>
+        <width>481</width>
+        <height>91</height>
        </rect>
       </property>
       <property name="text">
-       <string/>
+       <string>FUTURE TRENDS</string>
       </property>
-      <property name="icon">
-       <iconset resource="resoureses.qrc">
-        <normaloff>:/settings.png</normaloff>:/settings.png</iconset>
+     </widget>
+     <widget class="QLabel" name="label_26">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>580</y>
+        <width>381</width>
+        <height>51</height>
+       </rect>
       </property>
-      <property name="iconSize">
-       <size>
-        <width>45</width>
-        <height>45</height>
-       </size>
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>By TOLNUT</string>
       </property>
      </widget>
     </widget>
@@ -220,6 +330,27 @@
        <string>Experience :</string>
       </property>
      </widget>
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>410</y>
+        <width>361</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>24</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -259,8 +390,8 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resoureses.qrc">
-        <normaloff>:/search_file.png</normaloff>:/search_file.png</iconset>
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/search_file.png</normaloff>:/icons/search_file.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -441,8 +572,8 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resoureses.qrc">
-        <normaloff>:/graph.png</normaloff>:/graph.png</iconset>
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/graph.png</normaloff>:/icons/graph.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -464,8 +595,8 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resoureses.qrc">
-        <normaloff>:/graph.png</normaloff>:/graph.png</iconset>
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/graph.png</normaloff>:/icons/graph.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -487,8 +618,8 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resoureses.qrc">
-        <normaloff>:/graph.png</normaloff>:/graph.png</iconset>
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/graph.png</normaloff>:/icons/graph.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -680,8 +811,8 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resoureses.qrc">
-        <normaloff>:/graph.png</normaloff>:/graph.png</iconset>
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/graph.png</normaloff>:/icons/graph.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -1045,6 +1176,48 @@
      <attribute name="title">
       <string>settings</string>
      </attribute>
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>250</y>
+        <width>201</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_17">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>250</y>
+        <width>201</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_28">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>100</y>
+        <width>641</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Choose Your Theme</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QPushButton" name="pushButton">
@@ -1063,8 +1236,8 @@
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="resoureses.qrc">
-      <normaloff>:/home.png</normaloff>:/home.png</iconset>
+     <iconset resource="resources.qrc">
+      <normaloff>:/icons/home.png</normaloff>:/icons/home.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -1089,8 +1262,8 @@
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="resoureses.qrc">
-      <normaloff>:/search.png</normaloff>:/search.png</iconset>
+     <iconset resource="resources.qrc">
+      <normaloff>:/icons/search.png</normaloff>:/icons/search.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -1115,8 +1288,8 @@
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="resoureses.qrc">
-      <normaloff>:/insert.png</normaloff>:/insert.png</iconset>
+     <iconset resource="resources.qrc">
+      <normaloff>:/icons/insert.png</normaloff>:/icons/insert.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -1141,8 +1314,8 @@
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="resoureses.qrc">
-      <normaloff>:/man.png</normaloff>:/man.png</iconset>
+     <iconset resource="resources.qrc">
+      <normaloff>:/icons/settings.png</normaloff>:/icons/settings.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -1156,6 +1329,7 @@
  </widget>
  <resources>
   <include location="resoureses.qrc"/>
+  <include location="resources.qrc"/>
  </resources>
  <connections/>
 </ui>

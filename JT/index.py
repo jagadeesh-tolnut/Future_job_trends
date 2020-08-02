@@ -31,6 +31,7 @@ class MainApp(QMainWindow, ui):
         self.UI()
 
     def UI(self):
+        self.tabWidget.tabBar().setVisible(False)
         self.comboBox_3.addItems(["2025","2024","2023","2022","2021"])
 
 
@@ -38,8 +39,8 @@ class MainApp(QMainWindow, ui):
         self.pushButton.clicked.connect(self.Open_Home)
         self.pushButton_2.clicked.connect(self.Open_Search)
         self.pushButton_3.clicked.connect(self.Open_Import)
-        self.pushButton_4.clicked.connect(self.Open_Expert)
-        self.pushButton_8.clicked.connect(self.Open_Settings)
+        self.pushButton_4.clicked.connect(self.Open_Settings)
+        #self.pushButton_8.clicked.connect(self.Open_Settings)
         self.pushButton_5.clicked.connect(self.predict)
         self.pushButton_6.clicked.connect(self.import_browse)
         self.pushButton_12.clicked.connect(self.data_plot)
@@ -47,6 +48,9 @@ class MainApp(QMainWindow, ui):
         self.pushButton_10.clicked.connect(self.pacf_plot)
         self.pushButton_11.clicked.connect(self.trend_plot)
         self.pushButton_7.clicked.connect(self.import_report)
+        self.pushButton_8.clicked.connect(self.apply_dark_theme)
+        self.pushButton_17.clicked.connect(self.apply_normal_theme)
+
 
     def explore(self):
         a = self.lineEdit.text()
@@ -425,6 +429,16 @@ class MainApp(QMainWindow, ui):
 
     def Open_Settings(self):
         self.tabWidget.setCurrentIndex(4)
+
+    def apply_dark_theme(self):
+        style = open('themes/dark.css')
+        style = style.read()
+        self.setStyleSheet(style)
+
+    def apply_normal_theme(self):
+        style = open('themes/normal.css')
+        style = style.read()
+        self.setStyleSheet(style)
 
 def main():
     app=QApplication(sys.argv)
