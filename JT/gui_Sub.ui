@@ -206,15 +206,15 @@
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>390</x>
         <y>260</y>
-        <width>271</width>
-        <height>71</height>
+        <width>221</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>40</pointsize>
+        <pointsize>32</pointsize>
        </font>
       </property>
       <property name="text">
@@ -224,10 +224,10 @@
      <widget class="QPushButton" name="pushButton_5">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>480</y>
+        <x>710</x>
+        <y>560</y>
         <width>341</width>
-        <height>111</height>
+        <height>71</height>
        </rect>
       </property>
       <property name="font">
@@ -245,16 +245,16 @@
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>140</y>
-        <width>251</width>
-        <height>71</height>
+        <x>390</x>
+        <y>110</y>
+        <width>211</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Ubuntu</family>
-        <pointsize>40</pointsize>
+        <pointsize>32</pointsize>
        </font>
       </property>
       <property name="text">
@@ -264,20 +264,26 @@
      <widget class="QLineEdit" name="lineEdit">
       <property name="geometry">
        <rect>
-        <x>330</x>
-        <y>140</y>
-        <width>641</width>
-        <height>81</height>
+        <x>240</x>
+        <y>180</y>
+        <width>521</width>
+        <height>61</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Ubuntu</family>
-        <pointsize>38</pointsize>
+        <pointsize>30</pointsize>
        </font>
       </property>
       <property name="statusTip">
        <string extracomment="Job Title"/>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
       <property name="placeholderText">
        <string>Enter the Job Title</string>
@@ -286,38 +292,54 @@
      <widget class="QLineEdit" name="lineEdit_2">
       <property name="geometry">
        <rect>
-        <x>330</x>
-        <y>260</y>
-        <width>641</width>
-        <height>81</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Ubuntu</family>
-        <pointsize>38</pointsize>
-       </font>
-      </property>
-      <property name="statusTip">
-       <string extracomment="Location"/>
-      </property>
-      <property name="placeholderText">
-       <string>Enter the Location</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="comboBox_4">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>380</y>
-        <width>311</width>
+        <x>240</x>
+        <y>330</y>
+        <width>531</width>
         <height>61</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Ubuntu</family>
-        <pointsize>29</pointsize>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="statusTip">
+       <string extracomment="Location"/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Enter the Location</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>406</y>
+        <width>591</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_4">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>460</y>
+        <width>280</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>25</pointsize>
        </font>
       </property>
       <property name="cursor">
@@ -350,8 +372,8 @@
      <widget class="QLabel" name="label_19">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>370</y>
+        <x>370</x>
+        <y>390</y>
         <width>271</width>
         <height>71</height>
        </rect>
@@ -369,15 +391,14 @@
      <widget class="QLabel" name="label_27">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>510</y>
-        <width>341</width>
-        <height>61</height>
+        <x>60</x>
+        <y>540</y>
+        <width>361</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Ubuntu</family>
         <pointsize>24</pointsize>
        </font>
       </property>
@@ -429,6 +450,7 @@
      <zorder>label</zorder>
      <zorder>lineEdit</zorder>
      <zorder>lineEdit_2</zorder>
+     <zorder>label_18</zorder>
      <zorder>comboBox_4</zorder>
      <zorder>label_19</zorder>
      <zorder>label_27</zorder>

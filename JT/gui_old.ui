@@ -35,7 +35,7 @@
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_5">
      <attribute name="title">
@@ -76,16 +76,10 @@
        <property name="geometry">
         <rect>
          <x>43</x>
-         <y>260</y>
+         <y>270</y>
          <width>361</width>
-         <height>131</height>
+         <height>111</height>
         </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Ubuntu</family>
-         <pointsize>44</pointsize>
-        </font>
        </property>
        <property name="text">
         <string>Salary Prediction</string>
@@ -133,16 +127,10 @@
        <property name="geometry">
         <rect>
          <x>50</x>
-         <y>270</y>
+         <y>280</y>
          <width>361</width>
-         <height>111</height>
+         <height>101</height>
         </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Ubuntu</family>
-         <pointsize>44</pointsize>
-        </font>
        </property>
        <property name="text">
         <string>Job Trend Prediction</string>
@@ -154,6 +142,19 @@
         <bool>true</bool>
        </property>
       </widget>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>20</y>
+        <width>481</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>FUTURE TRENDS</string>
+      </property>
      </widget>
      <widget class="QLabel" name="label_26">
       <property name="geometry">
@@ -171,31 +172,6 @@
       </property>
       <property name="text">
        <string>By TOLNUT</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_25">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>30</y>
-        <width>361</width>
-        <height>71</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Ubuntu</family>
-        <pointsize>44</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Job Trends</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <property name="wordWrap">
-       <bool>true</bool>
       </property>
      </widget>
     </widget>
@@ -229,11 +205,6 @@
         <width>341</width>
         <height>111</height>
        </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Ubuntu</family>
-       </font>
       </property>
       <property name="cursor">
        <cursorShape>OpenHandCursor</cursorShape>
@@ -270,12 +241,6 @@
         <height>81</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <family>Ubuntu</family>
-        <pointsize>38</pointsize>
-       </font>
-      </property>
       <property name="statusTip">
        <string extracomment="Job Title"/>
       </property>
@@ -292,17 +257,24 @@
         <height>81</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <family>Ubuntu</family>
-        <pointsize>38</pointsize>
-       </font>
-      </property>
       <property name="statusTip">
        <string extracomment="Location"/>
       </property>
       <property name="placeholderText">
        <string>Enter the Location</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>406</y>
+        <width>591</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </widget>
      <widget class="QComboBox" name="comboBox_4">
@@ -316,7 +288,6 @@
       </property>
       <property name="font">
        <font>
-        <family>Ubuntu</family>
         <pointsize>29</pointsize>
        </font>
       </property>
@@ -358,7 +329,6 @@
       </property>
       <property name="font">
        <font>
-        <family>Ubuntu</family>
         <pointsize>32</pointsize>
        </font>
       </property>
@@ -369,15 +339,14 @@
      <widget class="QLabel" name="label_27">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>510</y>
-        <width>341</width>
-        <height>61</height>
+        <x>640</x>
+        <y>410</y>
+        <width>361</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Ubuntu</family>
         <pointsize>24</pointsize>
        </font>
       </property>
@@ -388,51 +357,76 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_29">
+     <widget class="Line" name="line_9">
       <property name="geometry">
        <rect>
-        <x>320</x>
-        <y>37</y>
-        <width>381</width>
-        <height>41</height>
+        <x>310</x>
+        <y>80</y>
+        <width>401</width>
+        <height>20</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <family>Ubuntu</family>
-        <pointsize>27</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Job Salary Prediction</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QGroupBox" name="groupBox_3">
+     <widget class="Line" name="line_10">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>29</y>
+        <width>3</width>
+        <height>59</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_11">
       <property name="geometry">
        <rect>
         <x>310</x>
         <y>20</y>
         <width>401</width>
-        <height>71</height>
+        <height>20</height>
        </rect>
       </property>
-      <property name="title">
-       <string/>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <zorder>groupBox_3</zorder>
-     <zorder>label_2</zorder>
-     <zorder>pushButton_5</zorder>
-     <zorder>label</zorder>
-     <zorder>lineEdit</zorder>
-     <zorder>lineEdit_2</zorder>
-     <zorder>comboBox_4</zorder>
-     <zorder>label_19</zorder>
-     <zorder>label_27</zorder>
-     <zorder>label_29</zorder>
+     <widget class="QLabel" name="label_29">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>35</y>
+        <width>381</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Job Salary Prediction</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_12">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>29</y>
+        <width>3</width>
+        <height>59</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -449,7 +443,6 @@
       </property>
       <property name="font">
        <font>
-        <family>Ubuntu</family>
         <pointsize>33</pointsize>
        </font>
       </property>
@@ -514,12 +507,6 @@
         <height>81</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <family>Ubuntu</family>
-        <pointsize>41</pointsize>
-       </font>
-      </property>
       <property name="cursor">
        <cursorShape>OpenHandCursor</cursorShape>
       </property>
@@ -531,19 +518,70 @@
       <property name="geometry">
        <rect>
         <x>230</x>
-        <y>30</y>
-        <width>521</width>
-        <height>51</height>
+        <y>10</y>
+        <width>571</width>
+        <height>71</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Ubuntu</family>
         <pointsize>28</pointsize>
        </font>
       </property>
       <property name="text">
        <string>Prediction using ARIMA model</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>70</y>
+        <width>581</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>10</y>
+        <width>581</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_3">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>17</y>
+        <width>3</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_4">
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>17</y>
+        <width>3</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
       </property>
      </widget>
      <widget class="QLabel" name="label_5">
@@ -681,6 +719,58 @@
        </size>
       </property>
      </widget>
+     <widget class="Line" name="line_5">
+      <property name="geometry">
+       <rect>
+        <x>663</x>
+        <y>280</y>
+        <width>20</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_6">
+      <property name="geometry">
+       <rect>
+        <x>980</x>
+        <y>280</y>
+        <width>20</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_7">
+      <property name="geometry">
+       <rect>
+        <x>671</x>
+        <y>270</y>
+        <width>319</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_8">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>480</y>
+        <width>319</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
@@ -692,7 +782,6 @@
       </property>
       <property name="font">
        <font>
-        <family>Ubuntu</family>
         <pointsize>20</pointsize>
        </font>
       </property>
@@ -711,7 +800,6 @@
       </property>
       <property name="font">
        <font>
-        <family>Ubuntu</family>
         <pointsize>20</pointsize>
        </font>
       </property>
@@ -730,7 +818,6 @@
       </property>
       <property name="font">
        <font>
-        <family>Ubuntu</family>
         <pointsize>20</pointsize>
        </font>
       </property>
@@ -877,7 +964,6 @@
       </property>
       <property name="font">
        <font>
-        <family>Ubuntu</family>
         <pointsize>23</pointsize>
        </font>
       </property>
@@ -899,7 +985,6 @@
       </property>
       <property name="font">
        <font>
-        <family>Ubuntu</family>
         <pointsize>22</pointsize>
        </font>
       </property>
@@ -921,7 +1006,6 @@
       </property>
       <property name="font">
        <font>
-        <family>Ubuntu</family>
         <pointsize>24</pointsize>
        </font>
       </property>
@@ -937,7 +1021,6 @@
       </property>
       <property name="font">
        <font>
-        <family>Ubuntu</family>
         <pointsize>15</pointsize>
        </font>
       </property>
@@ -948,7 +1031,7 @@
      <widget class="QLabel" name="label_20">
       <property name="geometry">
        <rect>
-        <x>690</x>
+        <x>700</x>
         <y>290</y>
         <width>281</width>
         <height>21</height>
@@ -956,8 +1039,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Ubuntu</family>
-        <pointsize>15</pointsize>
+        <pointsize>13</pointsize>
        </font>
       </property>
       <property name="text">
@@ -973,9 +1055,6 @@
         <height>21</height>
        </rect>
       </property>
-      <property name="cursor">
-       <cursorShape>PointingHandCursor</cursorShape>
-      </property>
       <property name="text">
        <string/>
       </property>
@@ -988,9 +1067,6 @@
         <width>16</width>
         <height>21</height>
        </rect>
-      </property>
-      <property name="cursor">
-       <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="text">
        <string/>
@@ -1005,70 +1081,10 @@
         <height>21</height>
        </rect>
       </property>
-      <property name="cursor">
-       <cursorShape>PointingHandCursor</cursorShape>
-      </property>
       <property name="text">
        <string/>
       </property>
      </widget>
-     <widget class="QGroupBox" name="groupBox_4">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>20</y>
-        <width>581</width>
-        <height>71</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_5">
-      <property name="geometry">
-       <rect>
-        <x>670</x>
-        <y>270</y>
-        <width>321</width>
-        <height>221</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string/>
-      </property>
-     </widget>
-     <zorder>groupBox_5</zorder>
-     <zorder>groupBox_4</zorder>
-     <zorder>lineEdit_3</zorder>
-     <zorder>pushButton_6</zorder>
-     <zorder>label_3</zorder>
-     <zorder>pushButton_7</zorder>
-     <zorder>label_4</zorder>
-     <zorder>label_5</zorder>
-     <zorder>label_6</zorder>
-     <zorder>label_7</zorder>
-     <zorder>pushButton_9</zorder>
-     <zorder>pushButton_10</zorder>
-     <zorder>pushButton_11</zorder>
-     <zorder>label_8</zorder>
-     <zorder>label_9</zorder>
-     <zorder>label_10</zorder>
-     <zorder>lineEdit_4</zorder>
-     <zorder>lineEdit_5</zorder>
-     <zorder>lineEdit_6</zorder>
-     <zorder>label_11</zorder>
-     <zorder>pushButton_12</zorder>
-     <zorder>label_15</zorder>
-     <zorder>label_16</zorder>
-     <zorder>lineEdit_8</zorder>
-     <zorder>lineEdit_9</zorder>
-     <zorder>comboBox_3</zorder>
-     <zorder>label_17</zorder>
-     <zorder>label_20</zorder>
-     <zorder>checkBox</zorder>
-     <zorder>checkBox_2</zorder>
-     <zorder>checkBox_3</zorder>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -1257,17 +1273,24 @@
      <widget class="QPushButton" name="pushButton_8">
       <property name="geometry">
        <rect>
-        <x>140</x>
+        <x>40</x>
         <y>250</y>
         <width>291</width>
         <height>201</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <family>Ubuntu</family>
-        <pointsize>40</pointsize>
-       </font>
+      <property name="text">
+       <string>Blue</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_17">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>250</y>
+        <width>291</width>
+        <height>201</height>
+       </rect>
       </property>
       <property name="text">
        <string>Dark</string>
@@ -1282,12 +1305,6 @@
         <height>91</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <family>Ubuntu</family>
-        <pointsize>42</pointsize>
-       </font>
-      </property>
       <property name="text">
        <string>Choose Your Theme</string>
       </property>
@@ -1295,23 +1312,17 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_17">
+     <widget class="QPushButton" name="pushButton_18">
       <property name="geometry">
        <rect>
-        <x>610</x>
+        <x>720</x>
         <y>250</y>
         <width>291</width>
         <height>201</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <family>Ubuntu</family>
-        <pointsize>40</pointsize>
-       </font>
-      </property>
       <property name="text">
-       <string>Light</string>
+       <string>Default</string>
       </property>
      </widget>
     </widget>

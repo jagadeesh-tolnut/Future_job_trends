@@ -33,6 +33,10 @@ class MainApp(QMainWindow, ui):
     def UI(self):
         self.tabWidget.tabBar().setVisible(False)
         self.comboBox_3.addItems(["2025","2024","2023","2022","2021"])
+        # self.State.setStyleSheet("QGroupBox { background-color: rgb(0,255,0,20%); border:1px solid rgb(255, 170, 255); }")
+        # self.style = self.State.stylesheet()
+        self.Box_1()
+        self.Box_2()
 
 
     def Handle_Buttons(self):
@@ -48,8 +52,8 @@ class MainApp(QMainWindow, ui):
         self.pushButton_10.clicked.connect(self.pacf_plot)
         self.pushButton_11.clicked.connect(self.trend_plot)
         self.pushButton_7.clicked.connect(self.import_report)
-        self.pushButton_8.clicked.connect(self.apply_dark_theme)
-        self.pushButton_17.clicked.connect(self.apply_normal_theme)
+        self.pushButton_8.clicked.connect(self.apply_blue_theme)
+        self.pushButton_17.clicked.connect(self.apply_light_theme)
 
 
     def explore(self):
@@ -65,7 +69,20 @@ class MainApp(QMainWindow, ui):
         x = df["Month"]
         self.y = df["jobs"]
         y = df["jobs"]
-        model = ARIMA(y, order=(3, 2, 3))
+
+        p = 3
+        d = 2
+        q = 3
+        if self.checkBox.isChecked():
+            p = int(self.lineEdit_4.text())
+
+        if self.checkBox_2.isChecked():
+            d = int(self.lineEdit_5.text())
+
+        if self.checkBox_3.isChecked():
+            q = int(self.lineEdit_6.text())
+
+        model = ARIMA(y, order=(p, d, q))
         model_fit = model.fit()
         output = model_fit.forecast(60)  # Predicting the next 5 yrs
         self.report_future_job = output[0]
@@ -144,7 +161,6 @@ class MainApp(QMainWindow, ui):
         self.rep_gr_ans.setGeometry(240, 590, 241, 31)
         self.rep_gr_ans.setFont(QFont('Times', 15))
         self.report.show()
-
 
     def predict(self):
         # Importing the required modules
@@ -252,6 +268,8 @@ class MainApp(QMainWindow, ui):
                 with io.open("file1.csv", "a", encoding="utf8") as f1:
                     f1.write(fdata)
 
+
+
         import numpy as np
         import pandas as pd
 
@@ -346,7 +364,6 @@ class MainApp(QMainWindow, ui):
         for r in list:
             self.wiki_text = self.wiki_text.replace(r, '')
         print(self.wiki_text)
-
         self.sj()
 
     def sj(self):
@@ -400,11 +417,27 @@ class MainApp(QMainWindow, ui):
         df = pd.read_csv(self.lineEdit_3.text())
         x = df["Month"]
         y = df["jobs"]
-        model = ARIMA(y, order=(3, 2, 3))
+        p = 3
+        d = 2
+        q = 3
+        if self.checkBox.isChecked():
+            p = int(self.lineEdit_4.text())
+
+        if self.checkBox_2.isChecked():
+            d = int(self.lineEdit_5.text())
+
+        if self.checkBox_3.isChecked():
+            q = int(self.lineEdit_6.text())
+
+        model = ARIMA(y, order=(p, d, q))
         model_fit = model.fit()
         output = model_fit.forecast(60)  # Predicting the next 5 yrs
         future_job = output[0]
-        plt.plot(future_job)
+        plt.xlabel("Upcoming 5 years")
+        plt.ylabel("No. of jobs")
+        plt.plot(future_job, label = "Job line")
+        #plt.fill_between(x,output[2][0],output[2][1])
+        plt.legend()
         plt.show()
 
 
@@ -413,7 +446,6 @@ class MainApp(QMainWindow, ui):
         data_location = QFileDialog.getOpenFileName(self)
         print(data_location[0])
         self.lineEdit_3.setText(str(data_location[0]))
-
 
     def Open_Home(self):
         self.tabWidget.setCurrentIndex(0)
@@ -430,15 +462,38 @@ class MainApp(QMainWindow, ui):
     def Open_Settings(self):
         self.tabWidget.setCurrentIndex(4)
 
-    def apply_dark_theme(self):
-        style = open('themes/dark.css')
+    def apply_blue_theme(self):
+        style = open('themes/blue.css')
         style = style.read()
         self.setStyleSheet(style)
 
-    def apply_normal_theme(self):
-        style = open('themes/normal.css')
+    def apply_light_theme(self):
+        style = open('themes/light.css')
         style = style.read()
         self.setStyleSheet(style)
+    #
+    # def apply_normal_theme(self):
+    #     style = open('themes/normal.css')
+    #     style = style.read()
+    #     self.setStyleSheet(style)
+
+
+    def Box_1(self):
+        box_animation = QPropertyAnimation(self.groupBox, b"geometry")
+        box_animation.setDuration(2000)
+        box_animation.setStartValue(QRect(0,0,0,0))
+        box_animation.setEndValue(QRect(50,140,451,401))
+        box_animation.start()
+        self.box_animation_1 = box_animation
+
+    def Box_2(self):
+        box_animation = QPropertyAnimation(self.groupBox_2, b"geometry")
+        box_animation.setDuration(2000)
+        box_animation.setStartValue(QRect(0,0,0,0))
+        box_animation.setEndValue(QRect(560,140,451,401))
+        box_animation.start()
+        self.box_animation_2 = box_animation
+
 
 def main():
     app=QApplication(sys.argv)
