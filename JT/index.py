@@ -210,6 +210,8 @@ class MainApp(QMainWindow, ui):
         # taking only the number of jobs
         count = re.sub("Page 1 of ", "", count)
         count = re.sub(" jobs", "", count)
+        count = re.sub(",", "", count)
+
         # print(count)
 
         # creating a new csv file
@@ -225,6 +227,7 @@ class MainApp(QMainWindow, ui):
 
             # loop to take all salaries from the page
             for sal in readfull.find_all("span", {"class": "salaryText"}):
+                print("Collecting Data.....")
                 data = sal.text
                 data = re.sub("₹", "", data)
                 data = re.sub(",", "", data)
