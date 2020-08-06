@@ -1,0 +1,14 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+	<qresource>
+		<file>icons/home.png</file>
+		<file>icons/home_salary.png</file>
+		<file>icons/home_trend.png</file>
+		<file>icons/salary.png</file>
+		<file>icons/search.png</file>
+		<file>icons/plot.png</file>
+		<file>icons/trend.png</file>
+		<file>icons/settings.png</file>
+		<file>icons/info.png</file>
+	</qresource>
+</RCC>
