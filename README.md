@@ -1,3 +1,13 @@
+<h2>Job Trends</h2>
+
+<h4>Run:</h4>
+<p>Open the command line in the desired folder</p>
+    <p>In command line type:</p>
+        <p>python3 index.py</p>
+    
+    
+       
+    
     Job Trends
     Copyright (C) 2020  Jagadeesh
 
