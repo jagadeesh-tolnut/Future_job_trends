@@ -4,6 +4,7 @@
 <p>Open the command line in the desired folder</p>
     <p>In command line type:</p>
         <p>python3 index.py</p>
+<p>to execute the program</p>
     
     
        
