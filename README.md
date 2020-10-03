@@ -4,10 +4,10 @@
     <p>command "pip install pyqt5"
 
 <h4>Run:</h4>
-<p>Open the command line in the desired folder</p>
-    <p>In command line type:</p>
-        <p>python3 index.py</p>
-<p>to execute the program.</p>
+<p>Open the command line in the desired folder
+    <p>In command line type:
+        <p>python3 index.py
+<p>to execute the program.
     
     
        
