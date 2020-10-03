@@ -1,5 +1,8 @@
 <h2>Job Trends</h2>
 
+<p>Notes: Before running this application install PyQt5 
+    <p>command "pip install pyqt5"
+
 <h4>Run:</h4>
 <p>Open the command line in the desired folder</p>
     <p>In command line type:</p>
