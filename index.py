@@ -229,11 +229,11 @@ class MainApp(QMainWindow, ui):
         # Logic to generate the url
         job = self.lineEdit.text()
         loc = self.lineEdit_2.text()
-        u1 = "https://www.indeed.co.in/jobs?q="
+        u1 = "https://in.indeed.com/jobs?q="
         u2 = job
         u3 = "&l="
         u4 = loc
-        # url = "https://www.indeed.co.in/jobs?q=doctor&l=chennai"
+        # url = "https://in.indeed.com/jobs?q=doctor&l=chennai"
         url = u1 + u2 + u3 + u4
         var = urlopen(url)
         read = bs4.BeautifulSoup(var.text, "lxml")
@@ -263,7 +263,7 @@ class MainApp(QMainWindow, ui):
 
             # loop to take all salaries from the page
             for sal in readfull.find_all("span", {"class": "salaryText"}):
-                print("Collecting Data.....")
+                # print("Collecting Data.....")
                 data = sal.text
                 data = re.sub("₹", "", data)
                 data = re.sub(",", "", data)
@@ -316,7 +316,7 @@ class MainApp(QMainWindow, ui):
         data = df.head(5)
         #print(data)
 
-        experience = self.comboBox_4.currentText()
+        # experience = self.comboBox_4.currentText()
 
         min_sal = df["min_salary"]
 

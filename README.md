@@ -1,16 +1,13 @@
-<h2>Job Trends</h2>
+##Job Trends
 
-<p>Notes: Before running this application install PyQt5 
-    <p>command "pip install pyqt5"
+Notes: Before running this application install the required modules
+command `pip install -r requirements.txt`
 
-<h4>Run:</h4>
-<p>Open the command line in the desired folder
-    <p>In command line type:
-        <p>python3 index.py
-<p>to execute the program.
-    
-    
-       
+####Run:
+Open the command line in the desired folder
+In command line type:
+`python index.py` to execute the program.
+
     
     Job Trends
     Copyright (C) 2020  Jagadeesh
