@@ -14,7 +14,7 @@ mccabe==0.6.1
 numpy==1.22.0
 pandas==1.2.4
 patsy==0.5.1
-Pillow==9.0.1
+Pillow==9.3.0
 pylint==2.8.3
 pyparsing==2.4.7
 PyQt5==5.15.4
